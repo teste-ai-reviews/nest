@@ -11,15 +11,10 @@ import { Cat } from './interfaces/cat.interface';
 export class CatsController {
   constructor(private readonly catsService: CatsService) {}
 
-  @Post()
-  @Roles(['admin'])
-  async create(@Body() createCatDto: CreateCatDto) {
-    this.catsService.create(createCatDto);
-  }
 
   @Get()
   async findAll(): Promise<Cat[]> {
-    return this.catsService.findAll();
+    return this.catsService.findAl();
   }
 
   @Get(':id')
@@ -27,7 +22,7 @@ export class CatsController {
     @Param('id', new ParseIntPipe())
     id: number,
   ) {
-    // Retrieve a Cat instance by ID
     console.log(id);
+    return null;
   }
 }
