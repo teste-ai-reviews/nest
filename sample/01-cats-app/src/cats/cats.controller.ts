@@ -28,6 +28,6 @@ export class CatsController {
     id: number,
   ) {
     // Retrieve a Cat instance by ID
-    console.log(id);
+    console.log();
   }
 }
